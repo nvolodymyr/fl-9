@@ -1,0 +1,167 @@
+/*Print*/
+
+@media print {
+	.tm-sidebar,
+	.heading,
+	#about,
+	.blocks,
+	.img-fluid,
+	#ideas,
+	#contact {
+		display: none;
+	}
+	.tm-team-description-container {
+		max-width: 100%;
+		margin: 0 30px;
+		line-height: 1.3;
+	}
+	.tm-main-content {
+		margin: auto;
+		text-align: left;
+		padding: 0px;
+	}
+
+
+	div.tm-section-title {
+		color: skyblue;
+		text-align: left;
+	}
+	.flex-2-col {
+		flex-direction: column;
+
+		margin-bottom: 25px;
+
+	}
+
+	.tm-banner {
+		height: 170px;
+		padding: 1px;
+	}
+
+
+
+}
+
+/* 1) Lets look closer...*/
+
+@media screen {
+	#about .box img {
+		border-radius: 100%;
+	}
+	#about ul li h2:hover {
+		transition-delay: 0, 7s;
+		background-color: skyblue;
+		color: white;
+	}
+	/*3) Change color of first letter in each...*/
+	p::first-letter {
+		color: #76cdd7;
+		font-size: 30px;
+	}
+	/*4) Add box shadow to sidebar ...*/
+	.tm-sidebar,
+	.tm-content-box {
+		box-shadow: 0 0 7px rgba(1, 0.2, 0, 0.9);
+
+	}
+	/*
+5) Add triangle to each section on the page using pseudo ...*/
+	.tm-content-box {
+		position: relative;
+	}
+	.tm-content-box::after {
+		left: 0;
+		top: 0;
+		content: '';
+		position: absolute;
+
+		border-top: 20px solid skyblue;
+		border-right: 160px solid transparent;
+
+	}
+	.tm-content-box.flex-2-col:nth-child(2)::after {
+		display: none;
+	}
+
+	/*6) Change color of ‘How We Do It’ to ...*/
+	.flex-item > .tm-section-title {
+		color: gainsboro;
+		letter-spacing: 5px;
+	}
+	/*7) Each first paragraph which placed ...*/
+	h2 + p {
+		font-style: italic;
+	}
+	/*8) Text in the paragraph should look ...*/
+	p {
+		text-indent: 1.5em;
+		line-height: 1.5;
+	}
+	/*9) In this block apply the following styles:...*/
+	.heading .pad ol li a:visited {
+		color: silver;
+	}
+	
+	 .heading .pad ol li a:hover {
+       
+       color: #07baef;
+    } 
+	.heading .pad ol li a{
+       
+       color: black;
+    }
+	.pad li:first-child::after,
+	.pad li:nth-child(3)::after {
+		content: 'New';
+		color: red;
+		font-size: 12px;
+		vertical-align: text-top;
+
+	}
+	/*10) Add layout and styles for following block....*/
+	.blocks .tm-section-title {
+		color: cornflowerblue;
+		font-family: sans-serif;
+	}
+	.blocks ul li:nth-child(odd) {
+		background-color: lightgrey;
+
+	}
+	.blocks ul li p::first-letter {
+		color: black;
+	}
+	.blocks ul li p {
+		font-size: 20px;
+	}
+
+	/*11) Take a look to sidebar in Figure 10. You need to ...*/
+	.tm-main-nav ul li {
+		border-bottom: 2.5px dotted lightgrey;
+	}
+	.tm-main-nav ul li:nth-child(4) {
+		border-bottom: none;
+	}
+	/*12) Change the text color of text inputs and submit ...*/
+	.contact-form input {
+		color: red;
+	}
+	.contact-form button {
+		color: red;
+	}
+	form .mandatory-field::after {
+		content: "*";
+		color: red;
+		vertical-align: top;
+	}
+	/*
+input[type="email"]::after {
+        content: "*";
+        color: red;  
+            vertical-align: top;
+    }
+*/
+	.contact-form button:hover {
+		background-color: skyblue;
+		color: white;
+	}
+}
