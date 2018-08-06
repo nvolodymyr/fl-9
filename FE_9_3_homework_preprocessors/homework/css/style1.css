@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: transparent;
+  background-color: white;
+  line-height: 1.1;
+}
+
+body a {
+  color: #4ec3d8;
+  background-color: transparent;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  transition-duration: 0.5s;
+}
+
+body a:hover {
+  color: #990000;
+  font-size: 120%;
+  background-color: transparent;
+}
+
+body a:active {
+  color: red;
+  background-color: transparent;
+}
+
+.main-wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0 auto 0;
+}
+
+header .logo {
+  width: 45%;
+  display: inline-block;
+}
+
+header .logo img {
+  width: 100%;
+  height: auto;
+}
+
+header nav {
+  position: absolute;
+  display: inline-block;
+  margin-top: 185px;
+  width: 55%;
+  border-bottom: 1px solid deepskyblue;
+  border-top: 1px solid deepskyblue;
+  text-align: center;
+  padding: 17px 0;
+}
+
+header nav a {
+  text-transform: uppercase;
+  font-size: 21px;
+  text-decoration: none;
+  padding: 0 35px;
+}
+
+.toolbar {
+  width: 100%;
+  text-align: right;
+}
+
+.toolbar input[type="text"] {
+  border: 1.7px solid;
+  border-color: skyblue;
+  background-color: white;
+  color: transparent;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.toolbar input::placeholder {
+  background-color: transparent;
+  color: #1fbcd3;
+}
+
+.post-list {
+  position: inherit;
+  width: 100%;
+}
+
+.post-list article:nth-child(odd) {
+  vertical-align: top;
+  margin: 20px 15px 0px 5px;
+}
+
+.post-list article:nth-child(even) {
+  vertical-align: top;
+  margin: 20px 5px 0px 15px;
+}
+
+.post-list article {
+  display: inline-block;
+  width: 45%;
+  background: #e5e5e5;
+  padding: 12px;
+  color: transparent;
+}
+
+.post-list article img {
+  width: 100%;
+}
+
+.post-list article .post-description {
+  color: skyblue;
+  background-color: transparent;
+  padding-bottom: 22px;
+  border-bottom: 1.5px solid skyblue;
+}
+
+.post-list article h3 {
+  color: #03a5db;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.post-list article p {
+  color: darkslategray;
+  background-color: transparent;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+
+.about h1 {
+  text-align: right;
+  color: deepskyblue;
+  background-color: transparent;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  padding-top: 33px;
+}
+
+.about p {
+  color: #315353;
+  background-color: transparent;
+  line-height: 1.3;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  padding-bottom: 30px;
+}
+
+.about img {
+  width: 100%;
+}
+
+#contact h1, #contact h4 {
+  text-align: right;
+  color: deepskyblue;
+  background-color: transparent;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+#contact form[name="homeForm"] {
+  margin-top: 20px;
+}
+
+#contact form[name="homeForm"] input, #contact form[name="homeForm"] textarea {
+  display: inherit;
+  width: 960px;
+  border: 1px solid #d3d3d3;
+  margin-top: 10px;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  padding: 5px 0px 5px 10px;
+}
+
+#contact form[name="homeForm"] input[type="submit"] {
+  background-color: deepskyblue;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  color: white;
+  text-transform: uppercase;
+  width: 20%;
+  margin-left: 81%;
+}
+
+#contact form[name="homeForm"] input[type="submit"]:hover {
+  background-color: aquamarine;
+  transition-duration: 1s;
+  color: darkred;
+}
+
+footer {
+  color: darkgrey;
+  background-color: transparent;
+  text-align: left;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+}

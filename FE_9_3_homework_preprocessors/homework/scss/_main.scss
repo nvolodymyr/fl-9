@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: transparent;
+    background-color: $body_color;
+    line-height: 1.1;
+    a {
+        color: $a-clr;
+        background-color: transparent;
+        font-family: $font-family;
+        transition-duration: 0.5s;
+        &:hover {
+            color: darken(red, 20%);
+            font-size: 120%;
+            background-color: transparent;
+        }
+        &:active {
+            color: red;
+            background-color: transparent;
+        }
+    }
+}
+.main-wrapper {
+    position: relative;
+    width: 960px;
+    margin: 0 auto 0;
+    
+}
+header {
+    .logo {
+        width: 45%;
+        display: inline-block;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    nav {
+        position: absolute;
+        display: inline-block;
+        margin-top: 185px;
+        width: 55%;
+        border-bottom: 1px solid $line_nav;
+        border-top: 1px solid $line_nav;
+        text-align: center;
+        padding: 17px 0;
+        a {
+            text-transform: uppercase;
+            font-size: 21px;
+            text-decoration: none;
+            padding: 0 35px;
+           
+          
+           
+           
+                }
+            }
+        }
+		.toolbar {
+    width: 100%;
+    text-align: right;
+    input[type="text"] {
+        border: 1.7px solid;
+        border-color: $tool_bar_border;
+        background-color: $tool_bar_back_ground_color;
+        color: transparent;
+        font-size: 20px;
+        padding: 20px;
+    }
+    input::placeholder {
+        background-color: transparent;
+        color: $tool_bar_input_color;
+      
+    }
+}
+.post-list {
+    position: inherit;
+    width: 100%;
+    article:nth-child(odd) {
+        vertical-align: top;
+        margin: 20px 15px 0px 5px;
+    }
+    article:nth-child(even) {
+        vertical-align: top;
+        margin: 20px 5px 0px 15px;
+    }
+    article {
+        display: inline-block;
+        width: 45%;
+        background: #e5e5e5;
+        padding: 12px;
+        color: transparent;
+        img {
+            width: 100%;
+        }
+        .post-description {
+            color: skyblue;
+            background-color: transparent;
+            padding-bottom: 22px;
+            border-bottom: 1.5px solid skyblue;
+        }
+        h3 {
+            color: #03a5db;
+             background-color: transparent;
+            text-transform: uppercase;
+            font-size: 19px;
+            font-family: $font-family;
+        }
+        p {
+            color: darkslategray;
+             background-color: transparent;
+            font-family: $font-family;
+        }
+    }
+}
+
+.about {
+    h1 {
+        text-align: right;
+        color: $h1_color_for_id_about;
+         background-color: transparent;
+        font-family: $font-family;
+        padding-top: 33px;
+    }
+    p {
+        color: $p_color;
+         background-color: transparent;
+        line-height: 1.3;
+        font-family: $font-family;
+        padding-bottom: 30px;
+    }
+    img{width: 100%}
+}
+#contact{
+    h1,h4{
+        text-align: right;
+        color: $h1_color_for_id_about;
+         background-color: transparent;
+        font-family: $font-family;
+        text-transform: uppercase;
+    }
+    form[name="homeForm"]{
+        margin-top: 20px;
+        input, textarea{
+            display: inherit;
+            width: 960px;
+            border: 1px solid #d3d3d3;
+           
+            margin-top: 10px;
+            font-family: $font-family;
+            font-size: 1.4em;
+            padding: 5px 0px 5px 10px;
+          
+        
+            
+        }
+        input[type="submit"]{
+            background-color: $the_last_unput_backgroun_color;
+            font-family: $font-family;
+            color: white;
+            text-transform: uppercase;
+          width: 20%;
+            margin-left: 81%;
+            &:hover{
+                              background-color: aquamarine;
+                        transition-duration: 1s;
+                             color: darkred;
+                
+            }
+            
+        }
+        
+    }
+    
+}
+
+
+footer{
+    color: darkgrey;
+     background-color: transparent;
+    text-align: left;
+    font-family:$font-family;
+  
+}
