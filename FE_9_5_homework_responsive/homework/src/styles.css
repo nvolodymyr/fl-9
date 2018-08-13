@@ -1,0 +1,202 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+
+/*
+:root {
+	--bg-color--dark: #0a1223;
+	--bg-color--light: #fff;
+	--link: #5d5d5d;
+	--link--active: #54597d;
+	--link--hover: #54597d;
+	--article-title: #ddd;
+	--article-title--dark: #000;
+	--thumbnail--description: #5d5d5d;
+
+	/* These styles are needed only for media query max-width: 575px */
+
+/* The 'Up' button (circle button at right bottom corner) */
+
+/*--btn-color: #fff;
+	--btn-bg-color: #5ebcff;
+
+	--navigation-border-bottom: #ddd;
+	--thumbnail-title: #484747;
+}*/
+
+/* Your styles go here */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #0a1223;
+	padding-top: 25px;
+	max-width: 2500px;
+
+}
+
+header {
+	text-align: right;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: #5d5d5d;
+	cursor: grabbing;
+	background-color: transparent;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+.active-link {
+	color: #54597d;
+
+}
+
+
+li {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+main > h1 {
+	text-align: center;
+	padding: 130px 0;
+	color: #ddd;
+	font-size: 4rem;
+}
+
+article {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	padding: 25px 150px;
+}
+
+article:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.text-content h2 {
+	font-size: 2rem;
+	background: linear-gradient(to right, #ddd, #5d5d5d);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.text-content p {
+	color: #5d5d5d;
+	font-size: 1.4rem;
+	text-indent: 25px;
+	text-align: justify;
+	width: 50%;
+	padding: 0;
+	display: inline;
+}
+
+.img {
+	width: 50%;
+
+}
+
+.img img {
+	width: 100%;
+	display: inline-block;
+}
+
+.text-content {
+
+	width: 50%;
+
+}
+
+.invisible-link {
+	display: none;
+}
+
+@media (max-width:991px) {
+	header {
+		text-align: center;
+		font-size: 1.9rem;
+	}
+
+
+	article:nth-child(even) {
+		flex-direction: column-reverse;
+		margin: 5px;
+		padding: 35px 100px;
+	}
+	p {
+		font-size: 1.3rem;
+	}
+	.text-content {
+		width: 100%;
+
+	}
+	.img {
+		width: 100%;
+	}
+
+}
+
+@media(max-width:575px) {
+	body {
+		background-color: #fff;
+		padding-top: 0;
+	}
+	h1 {
+		color: #000;
+	}
+
+	article:nth-child(even) {
+		flex-direction: column-reverse;
+		margin: 5px 50px;
+		padding: 35px 100px;
+	}
+	h2 {
+		background: unset;
+		-webkit-background-clip: unset;
+		-webkit-text-fill-color: unset;
+		color: #484747;
+	}
+	p {
+		text-indent: -20px;
+		font-size: 1.1rem
+	}
+	.invisible-link {
+		display: block;
+		color: #fff;
+		text-align: center;
+		width: 75px;
+		height: 75px;
+		line-height: 75px;
+		background: #2f89c1;
+		box-shadow: 7px 10px 4px #0a1223;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		border-radius: 50%;
+		text-decoration: none;
+
+	}
+	.invisible-link {
+		cursor: grab;
+	}
+	.invisible-link:hover {
+		background-color: aqua;
+		transition: 1s;
+
+	}
+}
