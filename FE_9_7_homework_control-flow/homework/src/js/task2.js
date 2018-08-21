@@ -10,7 +10,7 @@ if (confirm(`Do you want to play a game?`)) {
 		do {
 			secretNum = Math.round(Math.random() * maxRange);
 			attempt = maxAttempts;
-			for (; attempt > 0; attempt--) {
+			for (attempt; attempt > 0; attempt--) {
 				prizeForStroke = Math.floor(prizeMax / Math.pow(2, maxAttempts - attempt));
 				userNum = parseInt(prompt(
 					`Enter a number from 0 to ${maxRange}\n` +
