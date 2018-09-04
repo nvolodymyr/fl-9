@@ -93,7 +93,7 @@ actionList.addEventListener('dragstart', (e) => {
     if (!draggableElement) {
         return;
     }
-    draggableElement.style.opacity = '.3';
+    draggableElement.style.opacity = '.7';
 }, false);
 actionList.addEventListener('dragend', (e) => {
     draggableElement.style.opacity = '';
