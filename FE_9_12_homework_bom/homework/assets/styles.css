@@ -1,2 +1,20 @@
 /* Your styles go here */
 
+#addNew{
+     display: none;
+ }
+#modifyItem{
+    display: none;
+}
+img{
+    width: 20px;
+}
+li{
+    list-style-type: none;
+}
+.doneIcon{
+    display: none;
+}
+p{
+    display: inline-block;
+}
