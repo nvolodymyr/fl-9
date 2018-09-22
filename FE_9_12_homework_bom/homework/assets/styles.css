@@ -1,11 +1,13 @@
 /* Your styles go here */
 
-#addNew{
-     display: none;
- }
+
 #modifyItem{
     display: none;
 }
+#addNew{
+     display: none;
+ }
+
 img{
     width: 20px;
 }
