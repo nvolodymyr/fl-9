@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Homework 12 - Simple TODO List</title>
-  <link rel="stylesheet" href="./assets/styles.css">
+    <meta charset="UTF-8">
+    <title>Homework 12 - Simple TODO List</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
-<body>
-  <div id="root"></div>
+<body onhashchange="changePage()">
+<div id="root">
+    <section id="todo">
+        <ul id="ul">
+        </ul>
+        <button onclick="ChangeHref('#/addItem')">Add task</button>
+    </section>
 
-  <script src="./src/app.js"></script>
+    <section id="addNew">
+        <form id="form1">
+            <label> Add new item<br/>
+                <input type="text" value=" " id="addNewForm"></label>
+        </form>
+        <button>Save changes</button>
+        <button onclick="returnPage('#')">Cancel</button>
+    </section>
+    <form></form>
+    <section id="modifyItem">
+        <form class="form">
+            <label>Modify item <br/>
+                <input type="text" value=" " id="modifyItemForm"></label>
+            <input type="submit" value="Save changes">
+        </form>
+        <button onclick="returnPage('#')">Cancel</button>
+    </section>
+
+</div>
+<script src="./src/app.js"></script>
 </body>
 </html>
