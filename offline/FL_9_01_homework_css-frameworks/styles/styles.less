@@ -17,12 +17,17 @@
   }
   
 
-  .navbar {
-       .active {
-      .nav-link {
-        background-color: @blue;
-        color: #fff !important;
-        padding: 15px 20px;
+ 
+  nav {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  li {
+    &.active {
+      background-color: @blue !important;
+      a {
+            padding: 10px 15px;
+        color: @white !important;
       }
     }
   }
+}
