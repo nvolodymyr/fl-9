@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+   text-align: center;
+}
+
+.invisible{
+    display: none;
+}
+.water{
+    text-align: center;
+    animation: water ease 1s;
+    }
+  
+  @keyframes water{
+  
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+        font-size: 30px;
+        color: royalblue;
+      transform: scale(1);
+    }
+  }
+
+  .land {
+      text-align: center;
+    animation: land linear 1s;
+    }
+  
+  @keyframes land{
+          0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+            font-size: 30px;
+            color: green;
+          transform: scale(1);
+        }
+      }
