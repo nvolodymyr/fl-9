@@ -1,0 +1,8 @@
+{
+    "unused": true,
+    "expr": true,
+    "strict": "global",
+    "browser": true,
+    "esnext": true,
+    "esversion": 6
+}
