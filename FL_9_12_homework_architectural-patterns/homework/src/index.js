@@ -84,7 +84,7 @@ const reducer = function(state = defaultState, action = defaultAction) {
         MAIN_USERS.deleteUser(action.value);
         state = state.filter((user) => user.id != action.value);
         if (state.length < DEFAULT_ELEMETS) {
-            return state = MAIN_USERS.showByDefault();
+            return state = MAIN_USERS.showDefaulUsers();
         };
         return state;
     }
