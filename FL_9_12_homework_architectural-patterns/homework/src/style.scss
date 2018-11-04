@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$turqoise: #26a69a;
+$red: #E57373;
+$gray: #f8f8f8;
+$white: #fff;
+$shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+.root {
+    font-family: 'Open Sans', sans-serif;
+}
+.btn {
+    text-decoration: none;
+    transition: all .3s;
+    &-remove {
+        padding: 5px 10px;
+        color:  $white;
+        background: $red;
+          }
+}
+.search-block {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+   top: 0px;
+    background: $white;
+}
+.table-wrap {
+    padding: 22px 40px 0 20px;
+}
+
+.users-table {
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background: $turqoise;
+        color: $white;
+        text-align: left;
+        th {
+            padding: 15px 10px;
+
+        }
+    }
+    .show-more {
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        width: 100%;
+        background: $white;
+        bottom: 0;
+        left: 0;
+        p {
+            margin-bottom: 5px;
+        }
+    .search-form input {
+        border: none;
+        padding: 10px;
+        border-bottom: 1px solid $gray;
+    }
+    tbody tr {
+            .user-img {
+            padding: 7px;
+            img {
+                width: 65px;
+            }
+        }
+        cursor: pointer;
+
+        &:nth-child(odd) {
+            background: $gray;
+        }
+
+        &:hover {
+            background: $turqoise;
+        }
+
+    }
+}
+    button {
+        padding: 10px 160px;
+        border-radius: 90px;
+        background: $gray;
+        font-size: 21px;
+        text-transform: uppercase;
+    }
+}
+
+
