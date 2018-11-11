@@ -1,0 +1,84 @@
+
+
+body {
+    background-color: #b3a1a1;
+    font: 16px Arial;
+    color: black;
+}
+
+.main-container {
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center; 
+}
+
+.find {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.post {
+    width: 100%;
+    background-color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.foto {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+
+}
+
+
+.heart {
+    border: 1px solid #852525;
+    background-color: #916868;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 5px
+}
+
+.liked {
+    background-color: #e03030;
+    border-color: #d11313;
+}
+
+.unliked {
+    background-color: #e4d7d7;
+    border-color: #8d8989;
+}
+
+.likes {
+    display: inline-block;
+}
+input,
+textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+    width: 100%;
+}
+
+.btn {
+    color: black;
+    padding: 10px;
+    border: 1px solid #3d5469;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.btn:disabled {
+    color: #632929;
+}

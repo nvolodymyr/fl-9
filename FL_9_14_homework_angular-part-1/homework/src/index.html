@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FL9_14_homework_angularJS</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body ng-app="postsWall">
+    <div class="main-container" ng-controller="postsWallController">
+        <h1>POSTS WALL</h1>
+        <input ng-model="search.message" class="find" type="search"  placeholder="Search by title..." />
+        <div ng-repeat="post in posts | filter:search:strict">
+            <div class="post">
+                <div class="author">
+                    <img class="foto" src="#" ng-src="{{post.authorPhoto}}" alt="{{post.authorName}}">
+                    <div class="name">{{post.authorName}}</div>
+                </div>
+                <h2 ng-show="!editPost" class="title">{{post.title}}</h2>
+                <input ng-show="editPost" type="text" value="{{post.title}}" ng-model="post.title" required/>
+                <p ng-show="!editPost" class="message">{{post.message}}</p>
+                <textarea ng-show="editPost" value="{{post.message}}" ng-model="post.message" required></textarea>
+                <div ng-click="likes(post.id)" class="likes">
+                    <span ng-model="post.liked" class="heart" ng-class="post.liked ? 'liked' : 'unliked'">&#10084;</span>
+                    <span ng-bind="post.likes">{{post.likes}}</span>
+                </div>
+                <button ng-hide="post.author_name !== user.name || editPost" class="btn" ng-click="editPost = true">Edit</button>
+                <button ng-show="editPost" type="button" ng-click="edit(post.id); editPost = !editPost" class="btn">Save</button>
+                <button ng-show="editPost" type="button" ng-click="editPost = !editPost" class="btn">Cancel</button>
+            </div>
+        </div>
+
+        <button ng-click="newPost = !newPost" class="btn" ng-hide="newPost">Add new post</button>
+        <div ng-show="newPost">
+            <div class="post">
+                <div class="author">
+                    <img class="foto"  src="#" ng-src="{{user.photo}}" alt="{{user.name}}">
+                    <div class="name">{{user.name}}</div>
+                </div>
+                <input type="text" placeholder="Title" ng-model="addPost.title" required>
+                <textarea placeholder="Message" ng-model="addPost.message" required></textarea>
+                <button ng-click="addPost(); newPost = !newPost">Save</button>
+                <button  ng-click="newPost = !newPost">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="app/app.constants.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.controller.js"></script>
+  </body>
+</html>
