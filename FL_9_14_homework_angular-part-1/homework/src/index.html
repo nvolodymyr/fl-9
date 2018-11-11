@@ -10,7 +10,7 @@
   <body ng-app="postsWall">
     <div class="main-container" ng-controller="postsWallController">
         <h1>POSTS WALL</h1>
-        <input ng-model="search.message" class="find" type="search"  placeholder="Search by title..." />
+        <input ng-model="search.title" class="find" type="search"  placeholder="Search by title..." />
         <div ng-repeat="post in posts | filter:search:strict">
             <div class="post">
                 <div class="author">
