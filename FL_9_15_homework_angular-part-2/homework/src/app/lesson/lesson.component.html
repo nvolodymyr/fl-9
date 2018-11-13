@@ -1,0 +1,52 @@
+<div class="lessonsContainer">
+    <table class="table">
+  
+      <tr *ngIf="list.length">
+        <th>#</th>
+        <th>Topic</th>
+        <th>Date</th>
+        <th>Lecturer</th>
+        <th>Actions</th>
+      </tr>
+  
+      <tr *ngFor="let lesson of list">
+        <ng-template [ngTemplateOutlet]="loadTemplate(lesson)" [ngTemplateOutletContext]="{$implicit: lesson}">
+        </ng-template>
+      </tr>
+  
+    </table>
+  </div>
+  
+  <ng-template #readOnlyTemplate let-lesson>
+    <td>{{lesson.id}}</td>
+    <td>
+      <span>{{lesson.topic}}</span>
+    </td>
+    <td>
+      <span>{{lesson.date}}</span>
+    </td>
+    <td>
+      <span>{{lesson.lecturer}}</span>
+    </td>
+    <td class="editRowBtn">
+      <button class="editBtn" (click)="editLesson(lesson)">Edit</button>
+      <button class="deleteBtn" (click)="deleteLesson($event)">Delete</button>
+    </td>
+  </ng-template>
+  
+  <ng-template #editTemplate>
+    <td>{{editedLesson.id}}</td>
+    <td>
+      <input type="text" class="topicEdit" [(ngModel)]="editedLesson.topic" #topic="ngModel" required>
+    </td>
+    <td>
+      <input type="text" class="dateEdit" [(ngModel)]="editedLesson.date" #date="ngModel" required>
+    </td>
+    <td>
+      <input type="text" class="lecturerEdit" [(ngModel)]="editedLesson.lecturer" #lecturer="ngModel" required>
+    </td>
+    <td class="finishEditBtn">
+      <button class="saveBtn" (click)="saveChanges(topic.invalid || date.invalid || lecturer.invalid)" [ngClass]="{disabled: topic.invalid || date.invalid || lecturer.invalid}">Save</button>
+      <button class="cancelBtn" (click)="editLesson($event)">Cancel</button>
+    </td>
+  </ng-template>

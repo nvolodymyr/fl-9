@@ -1,0 +1,40 @@
+.scheduleWrapper {
+    width: 80%;
+    background: #757397;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 900px;
+  }
+  .table th {
+    color: #263238;
+  }
+  .addBtn {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ff5722;
+    color: #5c3a30;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .table td {
+    width: 15%;
+  }
+  
+  .addBtn:hover {
+    cursor: pointer;
+    color: rgb(59, 39, 39);
+    background: #6b483d;
+    transition: 0.2s all;
+  }
+
+  .table th,
+  td {
+    border: 1px solid #ff5722;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  
+ 

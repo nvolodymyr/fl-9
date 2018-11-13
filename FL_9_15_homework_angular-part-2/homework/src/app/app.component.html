@@ -1,0 +1,7 @@
+<div class="scheduleWrapper">
+  <button class="addBtn" (click)="openModal()">Add new lesson</button>
+
+  <app-modal *ngIf="open" [opened]=open (closeModal)="closeModal($event)" (addnewLesson)="addLessonToList($event)"></app-modal>
+  <app-lesson [list]="lessonsData"></app-lesson>
+
+</div>

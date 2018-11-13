@@ -1,0 +1,12 @@
+<div class="modal">
+    <div class="inputsContainer">
+            <input type="text" [(ngModel)]="lesson.topic" class="topic" placeholder="Topic" #topic="ngModel" required>
+            <input type="text" [(ngModel)]="lesson.date" class="date" placeholder="Date" #date="ngModel" required>
+            <input type="text" [(ngModel)]="lesson.lecturer" class="lecture" placeholder="Lecture" #lecturer="ngModel" required>
+    </div>
+
+    <div class="buttonsWrapper">
+            <button class="addInputData" (click)="addToTheList(topic.invalid || date.invalid || lecturer.invalid)" [ngClass]="{disabled: topic.invalid || date.invalid || lecturer.invalid}">Add to the list</button>
+            <button class="closeModal" (click)="onCloseModal()">Close modal</button>
+    </div>
+</div>
